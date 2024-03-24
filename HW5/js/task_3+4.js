@@ -28,7 +28,7 @@
 
   let maxReturn = max(a, b);
   if (maxReturn) {
-    console.log("Максимальное число: ", a);1
+    console.log("Максимальное число: ", a);
   } else console.log("Максимальное число: ", b);
 
   let arrayTask4 = [];
