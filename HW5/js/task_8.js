@@ -1,5 +1,5 @@
 {
-  function treygolnik(userInput = prompt("Введите число")) {
+  function treygolnik() {
     let star = "*",
       str = star + star,
       whiteSpace = " ",
@@ -18,7 +18,7 @@
   treygolnik((userInput = prompt("Введите число")));
   console.log("");
 
-  function reversetreygolnik(userInput = prompt("Введите число")) {
+  function reversetreygolnik() {
     let star = "*",
       str = star + star,
       whiteSpace = " ",
