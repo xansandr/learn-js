@@ -1,4 +1,6 @@
-let mail = "222.5@sh.i.zooooooooooooooo.oooofreniya",
+// "f2222@sh.i.zooooooooooooooo.oooofreniya"
+
+let mail = prompt("Введите адрес электронной почты"),
   slicedMail = mail.split("@");
 console.log(slicedMail);
 let acceptedStr = "abcdefghijklmnopqrstuvwxyz1234567890@.-_",
@@ -38,11 +40,13 @@ function conditionA() {
       }
     }
   }
+  return true;
 }
 
 function conditionB() {
   if (slicedMail[0].length <= 2) {
     console.log("Имя электронной почты должно быть более 2 символов.");
+    return false;
   }
 
   for (i = 0; i < slicedMail[0].length; i++) {
@@ -73,12 +77,8 @@ function conditionB() {
         return false;
       }
     }
-
-    if (slicedMail[0].includes(acceptedSymb[0]) == false) {
-      console.log("Имя электронной почты должно содержать точку.");
-      return false;
-    }
   }
+  return true;
 }
 
 function conditionC() {
@@ -95,9 +95,16 @@ function conditionC() {
       "Последний домен верхнего уровня не может быть длиной менее 2 и более 11 символов."
     );
   }
+  return true;
 }
 
-conditionA();
-conditionB();
-conditionC();
-// function checkMailInput(mail) {}
+// conditionA();
+// conditionB();
+// conditionC();
+function checkMailInput() {
+  if (conditionA(mail) && conditionB(mail) && conditionC(mail)) {
+    console.log("Почта нормальная");
+  }
+}
+
+checkMailInput();
