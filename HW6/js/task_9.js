@@ -18,9 +18,8 @@
     // console.log("3 condition - " + thiCondition);
 
     if (firCondition & secCondition & (thiCondition == true)) {
-      return true;
-    } else return false;
+      return console.log(true);
+    } else return console.log(false);
   }
-
-  console.log(validateMail());
+  validateMail(mail);
 }
