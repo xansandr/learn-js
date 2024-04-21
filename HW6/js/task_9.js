@@ -1,0 +1,26 @@
+{
+  let mail = "dada132ysa@mail.lol.com";
+
+  function validateMail(mail) {
+    let firRegex = /^[a-zA-Z0-9_.\-]*[@]?[a-zA-Z0-9_.\-]*$/;
+    let firCondition = firRegex.test(mail);
+
+    // console.log("1 condition - " + firCondition);
+
+    let secRegex = /^[a-zA-Z]+[a-zA-Z0-9]{1,}[@]?[a-zA-Z_.\-]*$/;
+    let secCondition = secRegex.test(mail);
+
+    // console.log("2 condition - " + secCondition);
+
+    let thiRegex = /.[a-zA-Z0-9_\-]{2,11}$/;
+    let thiCondition = thiRegex.test(mail);
+
+    // console.log("3 condition - " + thiCondition);
+
+    if (firCondition & secCondition & (thiCondition == true)) {
+      return true;
+    } else return false;
+  }
+
+  console.log(validateMail());
+}
